@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator | PasswordPro</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <a href="index.html">
+                <ion-icon name="key-outline" class="nav-icon"></ion-icon>
+                <p>PasswordPro</p>
+            </a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <h1>Create strong passwords with PasswordPro</h1>
+        <div class="main-container-output">
+            <input type="text" id="password" value="c_EWod0!?ho$ostL+lda" readonly>
+            <ion-icon name="repeat-outline" id="generate-password"></ion-icon>
+            <ion-icon name="copy-outline" id="copy-password"></ion-icon>
+        </div>
+        <div class="main-container-input">
+            <div class="input-block">
+                <label class="input-block-label">Password Length: </label>
+                <input type="number" id="password-length" min="8" max="32" placeholder="10" value="10">
+            </div>
+            <div class="input-block">
+                <label class="container">Letters
+                    <input type="checkbox" checked="checked" id="letters">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+            <div class="input-block">
+                <label class="container">Mixed Case
+                    <input type="checkbox" checked="checked" id="mixed-case">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+            <div class="input-block">
+                <label class="container">Punctuation
+                    <input type="checkbox" checked="checked" id="punctuation">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+            <div class="input-block">
+                <label class="container">Numbers
+                    <input type="checkbox" checked="checked" id="numbers">
+                    <span class="checkmark"></span>
+                  </label>
+            </div>
+        </div>
+        <div class="main-container-error">
+            <p style="color:red; font-family: 'Nunito Sans', sans-serif; display: none;" id="error-message">Please provide length for your password!</p>
+        </div>
+    </div>
+
+    <div class="brags">
+        <div class="brag">
+            <img src="images/improved-security-icon-1.png" alt="">
+            <p>Improved Security</p>
+            <span>By using a password generator, users can create strong, unique passwords that are less likely to be cracked by hackers.</span>
+        </div>
+        <div class="brag">
+            <img src="images/avoid-password-reuse.png" alt="">
+            <p>Avoid Password Reuse</p>
+            <span>Many people use the same password for multiple online accounts, which can be dangerous. A password generator can help users avoid this by creating unique passwords for each account, reducing the risk of a security breach.</span>
+        </div>
+        <div class="brag">
+            <img src="images/simplicity-icon.png" alt="">
+            <p>Simplicity</p>
+            <span>The password generator simplifies the process of creating new passwords. This can save time and effort.</span>
+        </div>
+    </div>
+
+    <footer>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="footer-bottom">
+            <p>@ 2023 PasswordPro</p>
+            <span>All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

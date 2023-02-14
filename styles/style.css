@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue:#235ebc;
+    --ff-headings:'Merriweather', serif;
+    --ff-text:'Nunito Sans', sans-serif;
+}
+
+nav{
+    width: 100%;
+    padding: 1rem 5rem;
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
+
+.nav-icon{
+    font-size: 3rem;
+}
+
+nav a p{
+    font-size: 2rem;
+    font-family: var(--ff-headings);
+}
+
+/*main container start*/
+.main-container{
+    max-width: 1200px;
+    margin: 100px auto;
+    text-align: center;
+    padding: 0 5rem;
+}
+
+.main-container h1{
+    margin-bottom: 25px;
+    font-size: 3rem;
+    color: var(--blue);
+    font-family: var(--ff-headings);
+}
+
+.main-container-output{
+    width: 100%;
+    padding: 2rem;
+    background-color: var(--blue);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container-output input{
+    user-select: none;
+    color: var(--blue);
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--blue);
+    padding-left: 25px;
+    font-size: 1.5rem;
+    font-family: var(--ff-text);
+}
+
+#generate-password{
+    font-size: 3rem;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+#copy-password{
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.main-container-input{
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid var(--blue);
+    position: relative;
+    bottom: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: var(--blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.input-block:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0;
+}
+
+.input-block{
+    position: relative;
+    top: 7px;
+}
+
+.input-block-label{
+    font-size: 1.25rem;
+    font-family: var(--ff-text);
+    margin: 0 5px;
+}
+
+.input-block input[type=number]{
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    padding-left: 9px;
+    font-size: 1.25rem;
+    font-family: var(--ff-headings);
+    color: var(--blue);
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: var(--ff-text);
+}
+  
+  /* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+  /* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: var(--blue);
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*brag container start*/
+
+.brags{
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    padding: 0 5rem;
+}
+
+.brag{
+    text-align: center;
+}
+
+.brag img{
+    width: 150px;
+    margin-bottom: 25px;
+}
+
+.brag p{
+    font-family: var(--ff-headings);
+    color: var(--blue);
+    margin-bottom: 15px;
+    font-size: 1.75rem;
+}
+
+.brag span{
+    font-family: var(--ff-text);
+    color: var(--blue);
+    opacity: 0.7;
+    line-height: 20px;
+}
+
+/*footer start*/
+
+footer{
+    margin-top: 30px;
+    width: 100%;
+    padding: 2rem 5rem;
+    color: white;
+    background-color: var(--blue);
+}
+
+footer ul{
+    width: 60%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.75rem;
+    display: block;
+}
+
+footer ul li a::after{
+    width: 0;
+    height: 1px;
+    display: block;
+    content: "";
+    background-color: white;
+    transition: all .3s;
+}
+
+footer ul li a:hover::after{
+    width: 100%;
+}
+
+.footer-bottom{
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p{
+    margin-bottom: 5px;
+    font-size: 1.25rem;
+    font-family: var(--ff-headings);
+    font-weight: bold;
+}
+
+.footer-bottom span{
+    opacity: 0.7;
+    font-family: var(--ff-text);
+}
+
+/*about container start*/
+
+.about-container{
+    max-width: 1200px;
+    margin: 250px auto;
+    text-align: center;
+    padding: 0 5rem;
+}
+
+.about-container h1{
+    font-size: 3rem;
+    font-family: var(--ff-headings);
+    color: var(--blue);
+    margin-bottom: 25px;
+}
+
+.about-container p{
+    margin-bottom: 15px;
+    font-family: var(--ff-text);
+    color: var(--blue);
+    font-size: 1.25rem;
+}
+
+.about-container p a{
+    color: var(--blue);
+    font-weight: bold;
+}
+
+
+/*media queries start*/
+
+@media (max-width:900px) {
+    .main-container{
+        margin: 50px auto;
+    }
+
+    .main-container h1{
+        font-size: 2rem;
+    }
+
+    .main-container-input{
+        display: block;
+    }
+
+    .main-container-output input{
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    #generate-password{
+        font-size: 2.25rem;
+    }
+
+    #copy-password{
+        font-size: 2.25rem;
+    }
+
+    .brags{
+        display: block;
+        margin: 25px auto;
+    }
+
+    .brag{
+        margin-bottom: 50px;
+    }
+
+    .brag img{
+        margin-bottom: 0;
+    }
+
+    .about-container{
+        margin: 130px auto;
+    }
+
+    .about-container h1{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .about-container p{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width:550px) {
+    .main-container{
+        margin: 35px auto;
+        padding: 0 2rem;
+    }
+
+    .main-container h1{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .container{
+        font-size: 1rem;
+    }
+
+    .input-block-label{
+        font-size: 1rem;
+    }
+
+    .main-container-input input[type=number]{
+        height: 40px;
+        width: 40px;
+        border: 1px solid var(--blue);
+        font-size: 1rem;
+        padding-left: 5px;
+    }
+
+    .main-container-input{
+        padding: 1rem;
+    }
+
+    .main-container-output{
+        padding: 1rem;
+    }
+
+    .brag{
+        margin-bottom: 30px;
+    }
+
+    .brag img{
+        width: 100px;
+    }
+
+    .brag p{
+        font-size: 1.25rem;
+        margin-bottom: 10px;
+    }
+
+    .brag span{
+        font-size: 1rem;
+    }
+    
+    .about-container{
+        padding: 0 3rem;
+    }
+
+    .about-container p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:450px) {
+    nav a p{
+        font-size: 1.25rem;
+    }
+
+    .nav-icon{
+        font-size: 1.75rem;
+    }
+
+    nav a{
+        gap: 5px;
+    }
+
+    footer ul{
+        display: block;
+    }
+
+    footer ul li{
+        margin-bottom: 15px;
+    }
+
+    .footer-bottom p{
+        font-size: 1rem;
+    }
+
+    .footer-bottom span{
+        font-size: 0.8rem;
+    }
+}
